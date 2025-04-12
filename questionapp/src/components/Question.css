@@ -1,0 +1,35 @@
+.question{
+ background-color: #897f95;
+ border-radius: 1rem;
+ padding: 2rem;
+ width: 500px;
+}
+.question p{
+    margin-bottom: 1rem;
+}
+
+.question h2{
+    margin-bottom: 2rem;
+}
+
+.question button{
+    border: 2px solid #fff;
+    margin: 10px;
+}
+
+#timer{
+    background-color: #8d8299;
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#timer p{
+    margin: 0;
+}
+

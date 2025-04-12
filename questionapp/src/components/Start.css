@@ -1,0 +1,86 @@
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+  
+ 
+  .welcome {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    
+
+  }
+  .start-list{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+   list-style: none;
+  }
+  
+  .welcome h2,
+  .footer-text {
+    margin-bottom: 0.5rem; 
+  }
+  .welcome h2 {
+    color: #cdc5d5;
+    
+  }
+  
+ 
+.footer-text {
+    color: #cdc5d5;
+  }
+  
+
+  .welcome img {
+    width: 300px;
+    margin: 15px; 
+    display: block;
+  }
+  
+
+  button {
+    margin-top: 8px; 
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .video-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer; 
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  footer {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    padding: 5px 0;
+    text-align: center;
+    font-size: 17px;
+  }
+  

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+body,
+html {
+  min-height: 100vh;
+  height: 100%;
+  background-image: url("./img/back.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.8rem 1.4rem;
+  background: linear-gradient(
+    90deg,
+    rgba(123, 112, 135, 1) 0%,
+    rgb(96, 88, 100) 100%
+  );
+  border-radius: 3rem;
+  border: none;
+}
+
+button:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(123, 112, 135) 100%,
+    rgb(147, 131, 155) 0%
+  );
+  
+}
