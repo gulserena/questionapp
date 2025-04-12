@@ -20,6 +20,9 @@ Bu uygulama, kullanıcıya 10 sorudan oluşan bir test sunar. Her soru için 30 
 - JavaScript
 - CSS
 
+##Canlı Site Link
+- https://magenta-babka-3dbcd9.netlify.app
+
 ## 💻 Kurulum ve Çalıştırma
 
 Projeyi klonlayın:
@@ -32,7 +35,6 @@ Gerekli bağımlılıkları yükleyin:
 npm install
 Projeyi başlatın:
 npm run dev
-
 
 
 
