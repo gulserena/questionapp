@@ -31,6 +31,23 @@ const GameOver = () => {
       <p>
         Boş bırakılan soru sayısı: {unanswered}
       </p>
+
+      <div className="question-review">
+      <h3>Soru İncelemesi:</h3>
+      {quizState.questions.map((question, index) => {
+        const userAnswer = quizState.userAnswers[index];
+        const isCorrect = userAnswer === question.answer;
+
+        return (
+          <div key={index} className={`question-item ${isCorrect ? "correct" : userAnswer ? "wrong" : "unanswered"}`}>
+            <p><strong>{index + 1}. Soru:</strong> {question.question}</p>
+            <p><strong>Verilen Cevap:</strong> {userAnswer || "Boş bırakıldı"}</p>
+            <p><strong>Doğru Cevap:</strong> {question.answer}</p>
+          </div>
+        );
+      })}
+    </div>
+
       <button onClick={() => dispatch({ type: "NEW_GAME" })}>Yeniden Başlat</button>
     </div>
   );

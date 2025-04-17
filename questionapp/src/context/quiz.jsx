@@ -14,6 +14,7 @@ const initialState = {
   correctAnswers: 0, // Doğru cevap sayısı
   wrongAnswers: 0, // Yanlış cevap sayısı
   unanswered: 0, // Boş bırakılan cevap sayısı
+  userAnswers: [],
 };
 
 const quizReducer = (state, action) => {
@@ -82,6 +83,7 @@ const quizReducer = (state, action) => {
           ...state,
           unanswered: state.unanswered + 1, // Boş bırakılan soruyu artırıyoruz
           answerSelected: true, // Bu cevabın geçerli olduğunu kabul ediyoruz
+          userAnswers: [...state.userAnswers, null],
         };
       }
 
@@ -99,6 +101,7 @@ const quizReducer = (state, action) => {
         correctAnswers: state.correctAnswers + correctAnswer, // Doğru cevapları artırıyoruz
         wrongAnswers: state.wrongAnswers + wrongAnswer, // Yanlış cevapları artırıyoruz
         answerSelected: true, // Cevap seçildi
+        userAnswers: [...state.userAnswers, option],
       };
     }
 
