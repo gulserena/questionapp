@@ -21,7 +21,7 @@ Bu uygulama, kullanıcıya 10 sorudan oluşan bir test sunar. Her soru için 30 
 - CSS
 
 ## Canlı Site Link
-- https://magenta-babka-3dbcd9.netlify.app
+- https://tubular-cuchufli-24355f.netlify.app
 
 ## Ekran Görüntüsü (revize)
 <img width="1341" alt="Ekran Resmi 2025-04-17 15 47 54" src="https://github.com/user-attachments/assets/18c103b7-26f8-4dc8-8538-83c35cd244f3" />
