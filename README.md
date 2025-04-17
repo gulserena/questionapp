@@ -23,6 +23,14 @@ Bu uygulama, kullanıcıya 10 sorudan oluşan bir test sunar. Her soru için 30 
 ## Canlı Site Link
 - https://magenta-babka-3dbcd9.netlify.app
 
+## Ekran Görüntüsü (revize)
+<img width="1341" alt="Ekran Resmi 2025-04-17 15 47 54" src="https://github.com/user-attachments/assets/18c103b7-26f8-4dc8-8538-83c35cd244f3" />
+<img width="1341" alt="Ekran Resmi 2025-04-17 15 47 47" src="https://github.com/user-attachments/assets/0389d0a4-b27a-484a-a690-eb7b9bebf5f1" />
+
+
+
+
+
 ## 💻 Kurulum ve Çalıştırma
 
 Projeyi klonlayın:
