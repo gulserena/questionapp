@@ -71,40 +71,54 @@ const quizReducer = (state, action) => {
     }
 
     case "CHECK_ANSWER": {
-      if (state.answerSelected) return state; // Eğer cevap zaten seçildiyse, işlem yapmıyoruz
-
-      const { answer, option } = action.payload;
-      let correctAnswer = 0;
-      let wrongAnswer = 0;
-
-      if (!option) {
-        // Eğer seçenek boşsa, unanswered sayısını artırıyoruz
+     
+        if (state.answerSelected) return state;
+      
+        const { answer, option } = action.payload;
+        let correctAnswer = 0;
+        let wrongAnswer = 0;
+      
+        const currentQuestion = state.questions[state.currentQuestion];
+      
+        // Boş bırakıldıysa
+        if (!option) {
+          return {
+            ...state,
+            unanswered: state.unanswered + 1,
+            answerSelected: true,
+            userAnswers: [
+              ...state.userAnswers,
+              {
+                questionId: currentQuestion.id,
+                answer: null,
+              },
+            ],
+          };
+        }
+      
+        // Doğru veya yanlış kontrolü
+        if (answer === option) {
+          correctAnswer = 1;
+        } else {
+          wrongAnswer = 1;
+        }
+      
         return {
           ...state,
-          unanswered: state.unanswered + 1, // Boş bırakılan soruyu artırıyoruz
-          answerSelected: true, // Bu cevabın geçerli olduğunu kabul ediyoruz
-          userAnswers: [...state.userAnswers, null],
+          score: state.score + correctAnswer,
+          correctAnswers: state.correctAnswers + correctAnswer,
+          wrongAnswers: state.wrongAnswers + wrongAnswer,
+          answerSelected: true,
+          userAnswers: [
+            ...state.userAnswers,
+            {
+              questionId: currentQuestion.id,
+              answer: option,
+            },
+          ],
         };
       }
-
-      // Doğru cevap
-      if (answer === option) {
-        correctAnswer = 1;
-      } else {
-        // Yanlış cevap
-        wrongAnswer = 1;
-      }
-
-      return {
-        ...state,
-        score: state.score + correctAnswer, // Puanı güncelliyoruz
-        correctAnswers: state.correctAnswers + correctAnswer, // Doğru cevapları artırıyoruz
-        wrongAnswers: state.wrongAnswers + wrongAnswer, // Yanlış cevapları artırıyoruz
-        answerSelected: true, // Cevap seçildi
-        userAnswers: [...state.userAnswers, option],
-      };
-    }
-
+      
     default:
       return state;
   }
